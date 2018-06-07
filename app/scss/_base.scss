@@ -1,0 +1,11 @@
+$border-color: rgb(230, 230, 230);
+$border-color-light: rgb(246,246,246);
+$hover-btns: rgb(243,243,243);
+$icons-fill: rgb(106,106,106);
+$font-color-light: rgb(179, 179, 179);
+$font-color-input: rgb(111,111,111);
+$font-color-dark: rgb(162,162,162);
+$focus-blue: rgb(0,108,255);
+@mixin open-sans {
+  font-family: 'Open Sans', sans-serif;
+}

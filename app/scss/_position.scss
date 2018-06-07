@@ -1,0 +1,122 @@
+.position {
+  height: 108px;
+  border-bottom: 1px solid  $border-color-light;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.position-container {
+  width: 260px;
+  height: 85px;
+  background-color: white;
+  display: grid;
+  grid-template-columns: 105px 80px auto;
+}
+
+.position-container_section {
+  height: 84px;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-rows: 27px 27px auto;
+  grid-template-columns: 18px 60px auto;
+
+  .label {
+    @include open-sans();
+    font-weight: normal;
+    font-size: .6rem;
+    color: $font-color-light;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  .input{
+    border: none;
+    border-bottom: 1px solid $border-color;
+    @include open-sans;
+    color: $font-color-input;
+    font-size: .75rem;
+    position: relative;
+    top: -7px;
+    display: inline;
+  }
+  .input:focus {
+    outline: none;
+    border-color: $focus-blue;
+  }
+  .label-wide {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    position: relative;
+    left: -8px;
+    font-size: .8rem;
+    color: $font-color-dark;
+  }
+  .arrows {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: .7rem;
+    @include open-sans;
+  }
+  .degree-sign {
+    position: absolute;
+    left: 100px;
+    bottom: 20px;
+    font-size: .4rem;
+    z-index: 10;
+    color: $font-color-dark;
+  }
+  .input-narrow {
+    grid-column-start: 3;
+    width: 24px;
+  }
+}
+
+
+.position-picker {
+  width: 17px;
+  height: 17px;
+  display: grid;
+  grid-template-columns: 6px 6px 5px;
+  grid-template-rows: 6px 6px 5px;
+}
+
+.square {
+  width: 3px;
+  height: 3px;
+  border: 1px solid $font-color-light;
+  margin-right: 1px;
+  margin-bottom: 1px;
+  cursor: pointer;
+}
+
+.square-active {
+  border-color: $icons-fill;
+  background-color: $icons-fill;
+}
+
+.checkbox-container {
+  grid-row-start: 2;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  input {
+    position: relative;
+    left: -5px;
+  }
+  label {
+    @include open-sans;
+    font-size: .8rem;
+    color: $font-color-dark;
+    position: relative;
+    left: -7px;
+  }
+}
+
+.margin-left {
+  margin-left: 10px;
+}

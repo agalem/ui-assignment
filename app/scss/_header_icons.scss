@@ -1,0 +1,275 @@
+body {
+  background-color: lightblue;
+  margin: 0;
+  padding: 0;
+}
+
+.aside {
+  height: 100vh;
+  width: 300px;
+  background-color: white;
+  position: relative;
+  left: 300px;
+}
+
+.icon-bar {
+  width: 100%;
+  height: 40px;
+  border-bottom: 1px solid $border-color;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-bar-container {
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.icon-bar-alignment {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 15px;
+  width: 65%;
+  border-right: 1px solid $border-color-light;
+}
+
+.icon-bar-zIndex {
+  display: flex;
+  justify-content: space-between;
+  width: 23%;
+}
+
+.custom-button {
+  background-color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.custom-button:hover, .custom-button:active, .custom-button:focus {
+  background-color: $hover-btns;
+}
+
+.icon-block_wide {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 7px;
+  height: 2px;
+  border: 1px solid $icons-fill;
+  background-color: #fff;
+  z-index: 2;
+}
+
+.icon-block_narrow {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 4px;
+  height: 4px;
+  background-color: $icons-fill;
+}
+
+
+.icon-align_center_hor {
+  margin-left: 20px;
+  .icon-block_wide {
+    top: 2px;
+  }
+  .icon-block_narrow {
+    top: 8px;
+    width: 5px;
+  }
+}
+
+.icon-bar_horizontal {
+  height: 100%;
+  width: 1px;
+  background-color: $icons-fill;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  z-index: 1;
+}
+
+.icon-bar_vertical {
+  width: 100%;
+  height: 1px;
+  background-color: $icons-fill;
+  position: absolute;
+  top: 49%;
+  left: 0;
+}
+
+.icon-align_right {
+  margin-left: 18px;
+  border-right: 1px solid $icons-fill;
+  .icon-block_wide {
+    top: 2px;
+  }
+  .icon-block_narrow {
+    top: 8px;
+    right: -5px;
+  }
+}
+
+.icon-align_top {
+  margin-left: 20px;
+  border-top: 1px solid $icons-fill;
+  .icon-block_wide {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+    top: 4.5px;
+    left: -6px;
+  }
+  .icon-block_narrow {
+    top: 2px;
+    right: -6px;
+  }
+}
+
+.icon-align_center_ver {
+  margin-left: 20px;
+  .icon-block_wide {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+    top: 5.2px;
+    right: -6px;
+    width: 7px;
+  }
+  .icon-block_narrow {
+    height: 5px;
+    top: 5px;
+    left: -6px;
+  }
+}
+
+.icon-align_bottom {
+  margin-left: 20px;
+  border-bottom: 1px solid $icons-fill;
+  .icon-block_wide {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+    top: 5.5px;
+    left: -6px;
+  }
+  .icon-block_narrow {
+    top: 8px;
+    right: -6px;
+  }
+}
+
+.box-fill {
+  width: 8px;
+  height: 8px;
+  background-color: $icons-fill;
+  position: absolute;
+}
+
+
+.icon-hide {
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .box-empty {
+    position: absolute;
+    background-color: #fff;
+    height: 7px;
+    width: 7px;
+  }
+  .box-empty:nth-of-type(2) {
+    left: 0;
+    bottom: 0;
+  }
+  .box-empty:nth-of-type(3) {
+    right: 0.5px;
+    top: 0;
+  }
+  .box-empty::before {
+    width: 3px;
+    height: 3px;
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    content: "";
+    border: 1px solid $icons-fill;
+  }
+  .box-fill {
+    top: 3px;
+    left: 3px;
+  }
+}
+
+.icon-show {
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .box-fill {
+    border: 1px solid #fff;
+    z-index: 2;
+    left: 2px;
+    top: 2px;
+  }
+  .box-empty {
+    position: absolute;
+    height: 5px;
+    width: 5px;
+    z-index: 1;
+    border: 1px solid $icons-fill;
+  }
+  .box-empty:nth-of-type(2) {
+    left: -.5px;
+    bottom: 0;
+  }
+  .box-empty:nth-of-type(3) {
+    right: 0;
+    top: 0;
+  }
+}
+
+.alignment-button {
+  display: inline-block;
+  position: relative;
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 4px;
+}
+
+
+.icon-box {
+  width: .9rem;
+  height: .9rem;
+  display: block;
+  position: relative;
+  top: 1px;
+  left: -22px;
+}
+
+
+.icon-align_left {
+  border-left:1px solid $icons-fill;
+  margin-left: 20px;
+  .icon-block_wide {
+    top: 2px;
+  }
+  .icon-block_narrow {
+    left: -5px;
+    top: 8px;
+  }
+}

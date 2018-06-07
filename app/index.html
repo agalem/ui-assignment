@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--build:css css/styles.min.css-->
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
+    <!--endbuild-->
+</head>
+<body>
+
+    <aside class="aside">
+        <section class="icon-bar">
+            <div class="icon-bar-container">
+                <div class="icon-bar-alignment">
+                    <button class="custom-button alignment-button">
+                        <span class="icon-box icon-align_left">
+                            <span class="icon-block_wide"></span>
+                            <span class="icon-block_narrow"></span>
+                        </span>
+                    </button>
+                    <button class="custom-button alignment-button">
+                        <span class="icon-box icon-align_center_hor">
+                            <span class="icon-block_wide"></span>
+                            <span class="icon-block_narrow"></span>
+                            <span class="icon-bar_horizontal"></span>
+                        </span>
+                    </button>
+                    <button class="custom-button alignment-button">
+                        <span class="icon-box icon-align_right">
+                            <span class="icon-block_wide"></span>
+                            <span class="icon-block_narrow"></span>
+                        </span>
+                    </button>
+                    <button class="custom-button alignment-button">
+                        <span class="icon-box icon-align_top">
+                            <span class="icon-block_wide"></span>
+                            <span class="icon-block_narrow"></span>
+                        </span>
+                    </button>
+                    <button class="custom-button alignment-button">
+                        <span class="icon-box icon-align_center_ver">
+                            <span class="icon-block_wide"></span>
+                            <span class="icon-block_narrow"></span>
+                            <span class="icon-bar_vertical"></span>
+                        </span>
+                    </button>
+                    <button class="custom-button alignment-button">
+                        <span class="icon-box icon-align_bottom">
+                            <span class="icon-block_wide"></span>
+                            <span class="icon-block_narrow"></span>
+                        </span>
+                    </button>
+                </div>
+                <div class="icon-bar-zIndex">
+                    <button class="custom-button alignment-button">
+                        <span class="icon-box icon-hide">
+                            <span class="box-fill"></span>
+                            <span class="box-empty"></span>
+                            <span class="box-empty"></span>
+                        </span>
+                    </button>
+                    <button class="custom-button alignment-button">
+                        <span class="icon-box icon-show">
+                            <span class="box-fill"></span>
+                            <span class="box-empty"></span>
+                            <span class="box-empty"></span>
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="position">
+           <div class="position-container">
+                <div class="position-container_section">
+                    <p class="label">
+                        W
+                    </p>
+                    <input class="input" title="w" placeholder="500">
+                    <span class="arrows">
+                        &#8652;
+                    </span>
+                    <p class="label">
+                        X
+                    </p>
+                    <input class="input" title="x" placeholder="0">
+                    <p class="label label-wide">
+                        Rotation
+                        <span class="degree-sign">0</span>
+                    </p>
+                    <input class="input input-narrow" type="text" id="lat" placeholder="0" value="">
+                </div>
+               <div class="position-container_section">
+                   <p class="label">
+                       H
+                   </p>
+                   <input class="input" title="w" placeholder="100">
+                   <span class="arrows">
+                    </span>
+                   <p class="label">
+                       Y
+                   </p>
+                   <input class="input" title="x" placeholder="0">
+               </div>
+               <div class="position-container_section margin-left">
+                    <div class="position-picker">
+                        <span onclick="handleActiveSquare();" id="square1" class="square square-active"></span>
+                        <span onclick="handleActiveSquare();" id="square2" class="square"></span>
+                        <span onclick="handleActiveSquare();" id="square3" class="square"></span>
+                        <span onclick="handleActiveSquare();" id="square4" class="square"></span>
+                        <span onclick="handleActiveSquare();" id="square5" class="square"></span>
+                        <span onclick="handleActiveSquare();" id="square6" class="square"></span>
+                        <span onclick="handleActiveSquare();" id="square7" class="square"></span>
+                        <span onclick="handleActiveSquare();" id="square8" class="square"></span>
+                        <span onclick="handleActiveSquare();" id="square9" class="square"></span>
+                    </div>
+                   <div class="checkbox-container">
+                       <input id="checkbox" type="checkbox" title="sticky">
+                       <label for="checkbox" >Sticky</label>
+                   </div>
+               </div>
+           </div>
+        </section>
+
+
+    </aside>
+
+
+
+    <!--build:js js/main.min.js -->
+    <script src="js/script.js"></script>
+    <script>
+
+        function handleActiveSquare() {
+            var activeSquareId = document.getElementsByClassName('square-active')[0].getAttribute('id');
+            var activeSquare = document.getElementById(activeSquareId);
+            activeSquare.classList.remove('square-active');
+            document.getElementById(event.currentTarget.id).classList.add('square-active');
+        }
+
+    </script>
+    <!-- endbuild -->
+</body>
+</html>
