@@ -9,3 +9,16 @@ $focus-blue: rgb(0,108,255);
 @mixin open-sans {
   font-family: 'Open Sans', sans-serif;
 }
+
+.input{
+  border: none;
+  border-bottom: 1px solid $border-color;
+  @include open-sans;
+  color: $font-color-input;
+  font-size: .75rem;
+  display: inline;
+}
+.input:focus {
+  outline: none;
+  border-color: $focus-blue;
+}

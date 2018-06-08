@@ -1,3 +1,15 @@
+.input {
+  border: none;
+  border-bottom: 1px solid #e6e6e6;
+  font-family: 'Open Sans', sans-serif;
+  color: #6f6f6f;
+  font-size: .75rem;
+  display: inline; }
+
+.input:focus {
+  outline: none;
+  border-color: #006cff; }
+
 body {
   background-color: lightblue;
   margin: 0;
@@ -286,13 +298,13 @@ body {
   .position-container_section .degree-sign {
     position: absolute;
     left: 100px;
-    bottom: 20px;
+    bottom: 22px;
     font-size: .4rem;
     z-index: 10;
     color: #a2a2a2; }
   .position-container_section .input-narrow {
     grid-column-start: 3;
-    width: 24px; }
+    width: 27px; }
 
 .position-picker {
   width: 17px;
@@ -329,3 +341,132 @@ body {
 
 .margin-left {
   margin-left: 10px; }
+
+.overflow {
+  width: 100%;
+  height: 122px;
+  border-bottom: 1px solid #f6f6f6;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.overflow-container {
+  width: 280px;
+  height: 98px;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-rows: 28px 28px auto; }
+
+.overflow-container_section {
+  position: relative;
+  margin: 0 15px 5px;
+  display: grid;
+  grid-template-columns: 75px 27px auto; }
+  .overflow-container_section .input {
+    padding-bottom: 5px;
+    margin-bottom: 10px; }
+  .overflow-container_section .label {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: normal;
+    font-size: .8rem;
+    color: #a2a2a2;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    bottom: 3px; }
+  .overflow-container_section .icon-button {
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+    background-color: #fff;
+    border: 1px solid #e6e6e6;
+    border-radius: 2px;
+    position: relative;
+    cursor: pointer; }
+    .overflow-container_section .icon-button:hover {
+      background-color: #f3f3f3;
+      border-color: #f3f3f3; }
+    .overflow-container_section .icon-button .icon-button-container {
+      width: 9px;
+      height: 9px;
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      top: 5px; }
+      .overflow-container_section .icon-button .icon-button-container .btn-square {
+        width: 3px;
+        height: 3px;
+        position: absolute; }
+        .overflow-container_section .icon-button .icon-button-container .btn-square:nth-of-type(1) {
+          left: 0;
+          top: 0;
+          border-top: 1px solid #6a6a6a;
+          border-left: 1px solid #6a6a6a; }
+        .overflow-container_section .icon-button .icon-button-container .btn-square:nth-of-type(2) {
+          right: 0;
+          top: 0;
+          border-top: 1px solid #6a6a6a;
+          border-right: 1px solid #6a6a6a; }
+        .overflow-container_section .icon-button .icon-button-container .btn-square:nth-of-type(3) {
+          left: 0;
+          bottom: 0;
+          border-left: 1px solid #6a6a6a;
+          border-bottom: 1px solid #6a6a6a; }
+        .overflow-container_section .icon-button .icon-button-container .btn-square:nth-of-type(4) {
+          right: 0;
+          bottom: 0;
+          border-bottom: 1px solid #6a6a6a;
+          border-right: 1px solid #6a6a6a; }
+      .overflow-container_section .icon-button .icon-button-container .rect-hor {
+        width: 80%;
+        height: 5px;
+        position: absolute;
+        left: .5px;
+        top: 2.5px;
+        border-right: 1px solid #6a6a6a;
+        border-left: 1px solid #6a6a6a; }
+      .overflow-container_section .icon-button .icon-button-container .rect-ver {
+        height: 80%;
+        width: 5px;
+        position: absolute;
+        top: .5px;
+        left: 2px;
+        border-top: 1px solid #6a6a6a;
+        border-bottom: 1px solid #6a6a6a; }
+  .overflow-container_section .input-select {
+    width: 90px;
+    height: 25px;
+    border-radius: 0; }
+  .overflow-container_section select {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #fff;
+    border-radius: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearence: none;
+    position: relative;
+    background-image: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png");
+    background-position: right center;
+    /*Positioning*/
+    background-repeat: no-repeat;
+    background-size: 5px; }
+  .overflow-container_section .label-bottom {
+    position: absolute;
+    bottom: 3px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: .6rem;
+    color: #b3b3b3; }
+    .overflow-container_section .label-bottom:nth-of-type(1) {
+      left: 74px; }
+    .overflow-container_section .label-bottom:nth-of-type(2) {
+      left: 173px; }
+
+.input-percent {
+  width: 35px;
+  position: absolute;
+  right: 40px; }
+
+.overflow-container_section:last-of-type {
+  margin-bottom: 0; }
