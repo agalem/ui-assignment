@@ -126,13 +126,13 @@
 
         <section class="overflow">
             <div class="overflow-container">
-                <div class="overflow-container_section">
+                <div class="overflow-container_section" id="radius-btn-section">
                     <label class="label" for="radius">
                         Radius
                     </label>
-                    <div class="overflow-container-close">
+                    <div class="overflow-container-close show" id="radius-btn-close">
                         <input class="input" id="radius" title="radius" placeholder="2"/>
-                        <button class="icon-button">
+                        <button onclick="showContainer()" class="icon-button" name="radius-btn">
                         <span class="icon-button-container">
                             <span class="btn-square"></span>
                             <span class="btn-square"></span>
@@ -141,7 +141,7 @@
                         </span>
                         </button>
                     </div>
-                    <div class="overflow-container-open">
+                    <div class="overflow-container-open hide" id="radius-btn-open">
                         <label class="label-bottom" for="tl">TL</label>
                         <input id="tl" class="input input-open" placeholder="2">
 
@@ -154,19 +154,19 @@
                         <label class="label-bottom" for="bl">BL</label>
                         <input id="bl" class="input input-open" placeholder="2">
 
-                        <button class="icon-button">
+                        <button onclick="hideContainer()" class="icon-button" name="radius-btn">
                             <span class="icon-button-container-border">
                             </span>
                         </button>
                     </div>
                 </div>
-                <div class="overflow-container_section">
+                <div class="overflow-container_section" id="padding-btn-section">
                     <label class="label" for="padding">
                         Padding
                     </label>
-                    <div class="overflow-container-close">
+                    <div class="overflow-container-close show" id="padding-btn-close">
                         <input class="input" id="padding" title="radius" placeholder="2"/>
-                        <button class="icon-button">
+                        <button onclick="showContainer()" class="icon-button" name="padding-btn">
                             <span class="icon-button-container-border">
                                 <span class="btn-square-no_border"></span>
                                 <span class="btn-square-no_border"></span>
@@ -175,7 +175,7 @@
                             </span>
                         </button>
                     </div>
-                    <div class="overflow-container-open">
+                    <div class="overflow-container-open hide" id="padding-btn-open">
                         <label class="label-bottom" for="left">Left</label>
                         <input id="left" class="input input-open" placeholder="2">
 
@@ -188,7 +188,7 @@
                         <label class="label-bottom" for="bottom">Bottom</label>
                         <input id="bottom" class="input input-open" placeholder="2">
 
-                        <button class="icon-button">
+                        <button onclick="hideContainer()" class="icon-button" name="padding-btn">
                             <span class="icon-button-container-border">
                             </span>
                         </button>
@@ -226,6 +226,26 @@
         </section>
 
 
+        <section class="fill">
+            <div class="fill-container">
+                <div class="section-container-header">
+                    <p class="section-title">fill</p>
+                    <button onclick="toggleSection();" class="plus" name="fill">+</button>
+                </div>
+                <div class="fill-container-body show" id="fill-body">
+                    <input class="checkbox checkbox-color" type="checkbox" title="fill-color">
+                    <input class="colorpicker" type="color" title="fill-color">
+                    <input class="input input-code" type="text" title="fill-color" placeholder="#23F071">
+                    <input class="input" title="fill-color" placeholder="100%">
+
+                    <input class="checkbox checkbox-grad" type="checkbox" title="fill-color">
+                    <input class="colorpicker" type="color" title="fill-color">
+                    <label class="label-grad" >Gradient</label>
+                </div>
+            </div>
+        </section>
+
+
     </aside>
 
 
@@ -234,12 +254,48 @@
     <script src="js/script.js"></script>
     <script>
 
-        function handleActiveSquare() {
-            var activeSquareId = document.getElementsByClassName('square-active')[0].getAttribute('id');
-            var activeSquare = document.getElementById(activeSquareId);
+        const showContainer = () => {
+            const clickedBtn = event.currentTarget.name;
+            const toHide = document.getElementById(clickedBtn + '-close');
+            const toShow = document.getElementById(clickedBtn + '-open');
+            const section = document.getElementById(clickedBtn +'-section');
+
+            section.classList.add('margin-bottom');
+
+            toHide.classList.remove('show');
+            toHide.classList.add('hide');
+
+            toShow.classList.remove('hide');
+            toShow.classList.add('show');
+        };
+
+        const hideContainer = () => {
+            const clickedBtn = event.currentTarget.name;
+            const toHide = document.getElementById(clickedBtn + '-open');
+            const toShow = document.getElementById(clickedBtn + '-close');
+            const section = document.getElementById(clickedBtn +'-section');
+
+            section.classList.remove('margin-bottom');
+
+            toHide.classList.remove('show');
+            toHide.classList.add('hide');
+
+            toShow.classList.remove('hide');
+            toShow.classList.add('show');
+        };
+
+        const handleActiveSquare = () => {
+            const activeSquareId = document.getElementsByClassName('square-active')[0].getAttribute('id');
+            const activeSquare = document.getElementById(activeSquareId);
             activeSquare.classList.remove('square-active');
             document.getElementById(event.currentTarget.id).classList.add('square-active');
+        };
+
+
+        const toggleSection = () => {
+            console.log('Hi');
         }
+
 
     </script>
     <!-- endbuild -->

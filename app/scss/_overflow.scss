@@ -1,24 +1,32 @@
+
 .overflow {
   width: 100%;
-  height: 158px;
   border-bottom: 1px solid $border-color-light;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 14px 0;
 }
 
 .overflow-container {
   width: 280px;
-  height: 120px;
   margin: 0;
   padding: 0;
   display: grid;
-  grid-template-rows: 45px 45px 40px;
+  grid-template-rows: auto auto auto;
 }
+
+//add to overflow-container_section when open
+.margin-bottom {
+  margin-bottom: 18px !important;
+}
+
+//toggle to overflow-container-open /overflow-container-close
+
 
 .overflow-container_section {
   position: relative;
-  margin: 0 15px 5px;
+  margin: 0 15px;
   display: grid;
   grid-template-columns: 75px 80px 50px;
   .input {
@@ -174,18 +182,17 @@
   grid-column-start: 2;
   grid-column-end: 5;
   position: relative;
-  display: grid;
   grid-template-columns: 30px 20px;
-  display: none;
 }
 
 .overflow-container-open {
-  width: 100%;
+  -webkit-animation: slide-right 1s;
+  -o-animation: slide-right 1s;
+  animation: slide-right 1s;
   height: 30px;
   grid-column-start: 2;
   grid-column-end: 5;
   position: relative;
-  display: grid;
   grid-template-columns: 25px 5px 25px 5px 25px 5px 25px 10px 30px;
   .input-open {
     &:nth-of-type(2) {
@@ -228,3 +235,10 @@
   }
 }
 
+.show {
+  display: grid;
+}
+
+.hide {
+  display: none;
+}

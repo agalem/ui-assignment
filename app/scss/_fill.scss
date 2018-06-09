@@ -1,0 +1,64 @@
+.fill {
+  width: 100%;
+  border-bottom: 1px solid $border-color-light;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 0;
+}
+
+.fill-container {
+  width: 85%;
+}
+
+.fill-container-body {
+  width: 100%;
+  padding: 10px 0;
+  grid-template-columns: 20px 30px 70px 40px;
+  grid-template-rows: 20px 5px 20px;
+}
+
+.show {
+  display: grid;
+}
+
+.hide {
+  display: none;
+}
+
+.colorpicker {
+  height: 23px;
+  width: 21px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearence: none;
+  border: none;
+  border-radius: 5px;
+  grid-column-start: 2;
+  grid-row-start: 1;
+  &:nth-of-type(2) {
+    grid-row-start: 3;
+  }
+}
+
+.input-code {
+  margin-right: 10px;
+}
+
+.checkbox-color {
+  position: relative;
+  top: 4px;
+}
+
+.checkbox-grad {
+  position: relative;
+  top: 8px;
+}
+
+.label-grad {
+  grid-column-start: 3;
+  grid-row-start: 3;
+  @include open-sans;
+  color: $font-color-dark;
+  font-size: .9rem;
+}
