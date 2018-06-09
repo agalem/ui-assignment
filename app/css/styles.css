@@ -73,9 +73,7 @@ body {
 .aside {
   height: 100vh;
   width: 300px;
-  background-color: white;
-  position: relative;
-  left: 300px; }
+  background-color: white; }
 
 .icon-bar {
   width: 100%;

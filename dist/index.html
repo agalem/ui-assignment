@@ -3,10 +3,7 @@
 <head>
     <title>title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--build:css css/styles.min.css-->
-    <link rel="stylesheet" href="css/styles.css">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
-    <!--endbuild-->
+    <link rel="stylesheet" href="css/styles.min.css">
 </head>
 <body>
 
@@ -317,54 +314,6 @@
 
 
 
-    <!--build:js js/main.js -->
-    <script src="js/script.js"></script>
-    <script>
-
-        const showContainer = () => {
-            const clickedBtn = event.currentTarget.name;
-            const toHide = document.getElementById(clickedBtn + '-close');
-            const toShow = document.getElementById(clickedBtn + '-open');
-            const section = document.getElementById(clickedBtn +'-section');
-
-            section.classList.add('margin-bottom');
-
-            toHide.classList.remove('show');
-            toHide.classList.add('hide');
-
-            toShow.classList.remove('hide');
-            toShow.classList.add('show');
-        };
-
-        const hideContainer = () => {
-            const clickedBtn = event.currentTarget.name;
-            const toHide = document.getElementById(clickedBtn + '-open');
-            const toShow = document.getElementById(clickedBtn + '-close');
-            const section = document.getElementById(clickedBtn +'-section');
-
-            section.classList.remove('margin-bottom');
-
-            toHide.classList.remove('show');
-            toHide.classList.add('hide');
-
-            toShow.classList.remove('hide');
-            toShow.classList.add('show');
-        };
-
-        const handleActiveSquare = () => {
-            const activeSquareId = document.getElementsByClassName('square-active')[0].getAttribute('id');
-            const activeSquare = document.getElementById(activeSquareId);
-            activeSquare.classList.remove('square-active');
-            document.getElementById(event.currentTarget.id).classList.add('square-active');
-        };
-
-
-        const toggleSection = () => {
-            console.log('Hi');
-        }
-
-
-    </script>
-    <!-- endbuild -->
+    <script src="js/main.js"></script>
 </body>
 </html>
