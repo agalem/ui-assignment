@@ -42,6 +42,7 @@
     position: relative;
     top: -7px;
     display: inline;
+    padding-bottom: 0;
   }
   .input:focus {
     outline: none;
@@ -74,6 +75,7 @@
   .input-narrow {
     grid-column-start: 3;
     width: 27px;
+    padding-bottom: 0;
   }
 }
 

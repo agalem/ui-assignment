@@ -277,7 +277,8 @@ body {
     font-size: .75rem;
     position: relative;
     top: -7px;
-    display: inline; }
+    display: inline;
+    padding-bottom: 0; }
   .position-container_section .input:focus {
     outline: none;
     border-color: #006cff; }
@@ -304,7 +305,8 @@ body {
     color: #a2a2a2; }
   .position-container_section .input-narrow {
     grid-column-start: 3;
-    width: 27px; }
+    width: 27px;
+    padding-bottom: 0; }
 
 .position-picker {
   width: 17px;
@@ -344,7 +346,7 @@ body {
 
 .overflow {
   width: 100%;
-  height: 122px;
+  height: 158px;
   border-bottom: 1px solid #f6f6f6;
   display: flex;
   align-items: center;
@@ -352,19 +354,19 @@ body {
 
 .overflow-container {
   width: 280px;
-  height: 98px;
+  height: 120px;
   margin: 0;
   padding: 0;
   display: grid;
-  grid-template-rows: 28px 28px auto; }
+  grid-template-rows: 45px 45px 40px; }
 
 .overflow-container_section {
   position: relative;
   margin: 0 15px 5px;
   display: grid;
-  grid-template-columns: 75px 27px auto; }
+  grid-template-columns: 75px 80px 50px; }
   .overflow-container_section .input {
-    padding-bottom: 5px;
+    padding-bottom: 3px;
     margin-bottom: 10px; }
   .overflow-container_section .label {
     font-family: 'Open Sans', sans-serif;
@@ -372,12 +374,10 @@ body {
     font-size: .8rem;
     color: #a2a2a2;
     padding: 0;
-    margin: 0;
-    position: relative;
-    bottom: 3px; }
+    margin: 0; }
   .overflow-container_section .icon-button {
-    width: 20px;
-    height: 20px;
+    width: 17px;
+    height: 17px;
     margin-left: 10px;
     background-color: #fff;
     border: 1px solid #e6e6e6;
@@ -387,17 +387,50 @@ body {
     .overflow-container_section .icon-button:hover {
       background-color: #f3f3f3;
       border-color: #f3f3f3; }
-    .overflow-container_section .icon-button .icon-button-container {
-      width: 9px;
-      height: 9px;
+      .overflow-container_section .icon-button:hover .icon-button-container-border .btn-square-no_border {
+        background-color: #f3f3f3; }
+    .overflow-container_section .icon-button .icon-button-container-border {
+      width: 8px;
+      height: 8px;
       position: absolute;
       left: 0;
       right: 0;
-      margin: 0 auto;
-      top: 5px; }
-      .overflow-container_section .icon-button .icon-button-container .btn-square {
+      top: 0;
+      bottom: 0;
+      margin: auto auto;
+      border: 1px solid #6a6a6a; }
+      .overflow-container_section .icon-button .icon-button-container-border .btn-square-no_border {
         width: 3px;
         height: 3px;
+        position: absolute; }
+        .overflow-container_section .icon-button .icon-button-container-border .btn-square-no_border:nth-of-type(1) {
+          left: -1px;
+          top: -1px;
+          background-color: #fff; }
+        .overflow-container_section .icon-button .icon-button-container-border .btn-square-no_border:nth-of-type(2) {
+          right: -1px;
+          top: -1px;
+          background-color: #fff; }
+        .overflow-container_section .icon-button .icon-button-container-border .btn-square-no_border:nth-of-type(3) {
+          left: -1px;
+          bottom: -1px;
+          background-color: #fff; }
+        .overflow-container_section .icon-button .icon-button-container-border .btn-square-no_border:nth-of-type(4) {
+          right: -1px;
+          bottom: -1px;
+          background-color: #fff; }
+    .overflow-container_section .icon-button .icon-button-container {
+      width: 8px;
+      height: 8px;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto auto; }
+      .overflow-container_section .icon-button .icon-button-container .btn-square {
+        width: 2px;
+        height: 2px;
         position: absolute; }
         .overflow-container_section .icon-button .icon-button-container .btn-square:nth-of-type(1) {
           left: 0;
@@ -419,26 +452,10 @@ body {
           bottom: 0;
           border-bottom: 1px solid #6a6a6a;
           border-right: 1px solid #6a6a6a; }
-      .overflow-container_section .icon-button .icon-button-container .rect-hor {
-        width: 80%;
-        height: 5px;
-        position: absolute;
-        left: .5px;
-        top: 2.5px;
-        border-right: 1px solid #6a6a6a;
-        border-left: 1px solid #6a6a6a; }
-      .overflow-container_section .icon-button .icon-button-container .rect-ver {
-        height: 80%;
-        width: 5px;
-        position: absolute;
-        top: .5px;
-        left: 2px;
-        border-top: 1px solid #6a6a6a;
-        border-bottom: 1px solid #6a6a6a; }
   .overflow-container_section .input-select {
-    width: 90px;
     height: 25px;
-    border-radius: 0; }
+    border-radius: 0;
+    padding-bottom: 0; }
   .overflow-container_section select {
     font-family: 'Open Sans', sans-serif;
     background-color: #fff;
@@ -454,19 +471,61 @@ body {
     background-size: 5px; }
   .overflow-container_section .label-bottom {
     position: absolute;
-    bottom: 3px;
+    bottom: -4px;
     font-family: 'Open Sans', sans-serif;
     font-size: .6rem;
     color: #b3b3b3; }
     .overflow-container_section .label-bottom:nth-of-type(1) {
       left: 74px; }
     .overflow-container_section .label-bottom:nth-of-type(2) {
-      left: 173px; }
+      left: 165px; }
 
 .input-percent {
-  width: 35px;
-  position: absolute;
-  right: 40px; }
+  margin-left: 10px;
+  position: relative;
+  padding-bottom: 0; }
 
-.overflow-container_section:last-of-type {
-  margin-bottom: 0; }
+.overflow-container-close {
+  width: 100%;
+  height: auto;
+  grid-column-start: 2;
+  grid-column-end: 5;
+  position: relative;
+  display: grid;
+  grid-template-columns: 30px 20px;
+  display: none; }
+
+.overflow-container-open {
+  width: 100%;
+  height: 30px;
+  grid-column-start: 2;
+  grid-column-end: 5;
+  position: relative;
+  display: grid;
+  grid-template-columns: 25px 5px 25px 5px 25px 5px 25px 10px 30px; }
+  .overflow-container-open .input-open:nth-of-type(2) {
+    grid-column-start: 3; }
+  .overflow-container-open .input-open:nth-of-type(3) {
+    grid-column-start: 5; }
+  .overflow-container-open .input-open:nth-of-type(4) {
+    grid-column-start: 7; }
+  .overflow-container-open .label-bottom {
+    font-family: 'Open Sans', sans-serif;
+    font-size: .6rem;
+    color: #b3b3b3;
+    position: absolute; }
+    .overflow-container-open .label-bottom:nth-of-type(1) {
+      left: 0; }
+    .overflow-container-open .label-bottom:nth-of-type(2) {
+      left: 30px; }
+    .overflow-container-open .label-bottom:nth-of-type(3) {
+      left: 60px; }
+    .overflow-container-open .label-bottom:nth-of-type(4) {
+      left: 90px; }
+  .overflow-container-open .icon-button {
+    position: absolute;
+    right: 0;
+    top: 0; }
+    .overflow-container-open .icon-button .icon-button-container-border {
+      width: 6px;
+      height: 6px; }
