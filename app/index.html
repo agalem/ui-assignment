@@ -232,7 +232,7 @@
                     <p class="section-title">fill</p>
                     <button onclick="toggleSection();" class="plus" name="fill">+</button>
                 </div>
-                <div class="fill-container-body show" id="fill-body">
+                <div class="fill-container-body hide" id="fill-body">
                     <input class="checkbox checkbox-color" type="checkbox" title="fill-color">
                     <input class="colorpicker" type="color" title="fill-color">
                     <input class="input input-code" type="text" title="fill-color" placeholder="#23F071">
@@ -241,6 +241,73 @@
                     <input class="checkbox checkbox-grad" type="checkbox" title="fill-color">
                     <input class="colorpicker" type="color" title="fill-color">
                     <label class="label-grad" >Gradient</label>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="stroke">
+            <div class="stroke-container">
+                <div class="section-container-header">
+                    <p class="section-title">stroke</p>
+                    <button onclick="toggleSection();" class="plus" name="stroke">+</button>
+                </div>
+                <div class="stroke-container-body hide" id="stroke-body">
+                    <input class="checkbox checkbox-stroke" type="checkbox" title="fill-color">
+                    <input class="colorpicker" type="color" title="stroke-color">
+                    <input class="input input-code" type="text" title="stroke-color" placeholder="#23F071">
+                    <select class="input input-select line-select" title="line-select">
+                        <option value="solid" class="line">______</option>
+                        <option value="dashed" class="space-line">_ _ _ _</option>
+                        <option value="dotted" class="dotted-line">. . . . .</option>
+                    </select>
+                    <input class="input stroke-input" type="text" title="stroke-input" placeholder="1">
+                </div>
+            </div>
+        </section>
+
+        <section class="shadow">
+            <div class="shadow-container">
+                <div class="section-container-header">
+                    <p class="section-title">shadow</p>
+                    <button onclick="toggleSection();" class="plus" name="shadow">+</button>
+                </div>
+                <div class="shadow-container-body hide" id="shadow-body">
+                    <input class="checkbox checkbox-stroke" type="checkbox" title="fill-color">
+                    <input class="colorpicker" type="color" title="stroke-color">
+                    <input class="input input-percent" type="text" id="opacity-shadow" placeholder="40%">
+                    <label for="opacity-shadow" class="label-shadow">Opacity</label>
+                    <input class="input"  id="x-shadow" placeholder="0">
+                    <label for="x-shadow" class="label-shadow">x</label>
+                    <input class="input" id="y-shadow" placeholder="10">
+                    <label for="y-shadow" class="label-shadow">y</label>
+                    <input class="input" id="blur" placeholder="30">
+                    <label for="blur" class="label-shadow">Blur</label>
+                    <input class="input" id="spread" placeholder="0">
+                    <label for="spread" class="label-shadow">Spread</label>
+                </div>
+            </div>
+        </section>
+
+        <section class="inner-shadow">
+            <div class="inner-shadow-container">
+                <div class="section-container-header">
+                    <p class="section-title">inner shadow</p>
+                    <button onclick="toggleSection();" class="plus" name="inner-shadow">+</button>
+                </div>
+                <div class="shadow-container-body hide" id="inner-shadow-body">
+                    <input class="checkbox checkbox-stroke" type="checkbox" title="fill-color">
+                    <input class="colorpicker" type="color" title="stroke-color">
+                    <input class="input input-percent" type="text" id="opacity-inner-shadow" placeholder="40%">
+                    <label for="opacity-inner-shadow" class="label-shadow">Opacity</label>
+                    <input class="input"  id="x-inner-shadow" placeholder="0">
+                    <label for="x-inner-shadow" class="label-shadow">x</label>
+                    <input class="input" id="y-inner-shadow" placeholder="10">
+                    <label for="y-inner-shadow" class="label-shadow">y</label>
+                    <input class="input" id="inner-shadow-blur" placeholder="30">
+                    <label for="inner-shadow-blur" class="label-shadow">Blur</label>
+                    <input class="input" id="inner-shadow-spread" placeholder="0">
+                    <label for="inner-shadow-spread" class="label-shadow">Spread</label>
                 </div>
             </div>
         </section>

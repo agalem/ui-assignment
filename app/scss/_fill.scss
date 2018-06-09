@@ -60,5 +60,7 @@
   grid-row-start: 3;
   @include open-sans;
   color: $font-color-dark;
-  font-size: .9rem;
+  font-size: .8rem;
+  position: relative;
+  top: 4px;
 }

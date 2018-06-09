@@ -30,6 +30,7 @@
   color: #6f6f6f; }
 
 .plus {
+  background-color: #fff;
   position: absolute;
   border: none;
   top: -8px;
@@ -57,6 +58,12 @@
     transition: all .3s; }
   .plus:focus {
     outline: none; }
+
+.show {
+  display: grid; }
+
+.hide {
+  display: none; }
 
 body {
   background-color: lightblue;
@@ -508,6 +515,7 @@ body {
     padding-bottom: 0; }
   .overflow-container_section select {
     font-family: 'Open Sans', sans-serif;
+    color: #6f6f6f;
     background-color: #fff;
     border-radius: 0;
     -webkit-appearance: none;
@@ -579,12 +587,6 @@ body {
       width: 6px;
       height: 6px; }
 
-.show {
-  display: grid; }
-
-.hide {
-  display: none; }
-
 .fill {
   width: 100%;
   border-bottom: 1px solid #f6f6f6;
@@ -637,4 +639,90 @@ body {
   grid-row-start: 3;
   font-family: 'Open Sans', sans-serif;
   color: #a2a2a2;
-  font-size: .9rem; }
+  font-size: .8rem;
+  position: relative;
+  top: 4px; }
+
+.stroke {
+  padding: 13px 20px;
+  border-bottom: 1px solid #f6f6f6; }
+
+.stroke-container .stroke-container-body {
+  margin-top: 10px;
+  grid-template-columns: 20px 30px 70px 45px 10px 40px; }
+  .stroke-container .stroke-container-body .colorpicker {
+    grid-column-start: 2;
+    grid-row-start: 1; }
+
+.input-select {
+  height: 25px;
+  border-radius: 0;
+  padding-bottom: 0; }
+
+select {
+  font-family: 'Open Sans', sans-serif;
+  color: #6f6f6f;
+  background-color: #fff;
+  border-radius: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearence: none;
+  position: relative;
+  background-image: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png");
+  background-position: right center;
+  /*Positioning*/
+  background-repeat: no-repeat;
+  background-size: 5px; }
+
+.line-select {
+  padding-bottom: 5px; }
+
+.checkbox-stroke {
+  position: relative;
+  top: 4px;
+  grid-column-start: 1; }
+
+.stroke-input {
+  grid-column-start: 6; }
+
+.shadow {
+  padding: 15px 20px;
+  border-bottom: 1px solid #f6f6f6; }
+
+.shadow-container-body {
+  position: relative;
+  width: 100%;
+  margin-top: 8px;
+  margin-bottom: 15px;
+  grid-template-columns: 25px 30px 45px 35px 35px 35px 35px; }
+  .shadow-container-body .colorpicker {
+    grid-column-start: 2;
+    grid-row-start: 1; }
+  .shadow-container-body .input-percent {
+    grid-column-start: 3; }
+  .shadow-container-body .input {
+    margin-left: 5px; }
+
+.label-shadow {
+  position: absolute;
+  left: 0;
+  bottom: -16px;
+  color: #b3b3b3;
+  font-size: .65rem;
+  font-family: 'Open Sans', sans-serif; }
+  .label-shadow:nth-of-type(1) {
+    left: 60px; }
+  .label-shadow:nth-of-type(2) {
+    left: 108px;
+    text-transform: uppercase; }
+  .label-shadow:nth-of-type(3) {
+    left: 143px;
+    text-transform: uppercase; }
+  .label-shadow:nth-of-type(4) {
+    left: 175px; }
+  .label-shadow:nth-of-type(5) {
+    left: 213px; }
+
+.inner-shadow {
+  padding: 15px 20px;
+  border-bottom: 1px solid #f6f6f6; }

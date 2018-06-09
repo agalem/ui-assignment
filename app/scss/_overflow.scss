@@ -142,6 +142,7 @@
   }
   select {
     @include open-sans;
+    color: $font-color-input;
     background-color: #fff;
     border-radius: 0;
     -webkit-appearance: none;
@@ -233,12 +234,4 @@
       height: 6px;
     }
   }
-}
-
-.show {
-  display: grid;
-}
-
-.hide {
-  display: none;
 }

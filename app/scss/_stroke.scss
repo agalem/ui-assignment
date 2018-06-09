@@ -1,0 +1,49 @@
+.stroke {
+  padding: 13px 20px;
+  border-bottom: 1px solid $border-color-light;
+}
+
+.stroke-container {
+  .stroke-container-body {
+    margin-top: 10px;
+    grid-template-columns: 20px 30px 70px 45px 10px 40px;
+    .colorpicker {
+      grid-column-start: 2;
+      grid-row-start: 1;
+    }
+  }
+}
+
+.input-select {
+  height: 25px;
+  border-radius: 0;
+  padding-bottom: 0;
+}
+select {
+  @include open-sans;
+  color: $font-color-input;
+  background-color: #fff;
+  border-radius: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearence: none;
+  position: relative;
+  background-image: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png");
+  background-position: right center; /*Positioning*/
+  background-repeat: no-repeat;
+  background-size: 5px;
+}
+
+.line-select {
+  padding-bottom: 5px;
+}
+
+.checkbox-stroke {
+  position: relative;
+  top: 4px;
+  grid-column-start: 1;
+}
+
+.stroke-input {
+  grid-column-start: 6;
+}
