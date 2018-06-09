@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.min.css">
+</head>
+<body>
+
+    <aside class="aside">
+        <section class="icon-bar">
+            <div class="icon-bar-container">
+                <div class="icon-bar-alignment">
+                    <button class="custom-button alignment-button">
+                        <span class="icon-box icon-align_left">
+                            <span class="icon-block_wide"></span>
+                            <span class="icon-block_narrow"></span>
+                        </span>
+                    </button>
+                    <button class="custom-button alignment-button">
+                        <span class="icon-box icon-align_center_hor">
+                            <span class="icon-block_wide"></span>
+                            <span class="icon-block_narrow"></span>
+                            <span class="icon-bar_horizontal"></span>
+                        </span>
+                    </button>
+                    <button class="custom-button alignment-button">
+                        <span class="icon-box icon-align_right">
+                            <span class="icon-block_wide"></span>
+                            <span class="icon-block_narrow"></span>
+                        </span>
+                    </button>
+                    <button class="custom-button alignment-button">
+                        <span class="icon-box icon-align_top">
+                            <span class="icon-block_wide"></span>
+                            <span class="icon-block_narrow"></span>
+                        </span>
+                    </button>
+                    <button class="custom-button alignment-button">
+                        <span class="icon-box icon-align_center_ver">
+                            <span class="icon-block_wide"></span>
+                            <span class="icon-block_narrow"></span>
+                            <span class="icon-bar_vertical"></span>
+                        </span>
+                    </button>
+                    <button class="custom-button alignment-button">
+                        <span class="icon-box icon-align_bottom">
+                            <span class="icon-block_wide"></span>
+                            <span class="icon-block_narrow"></span>
+                        </span>
+                    </button>
+                </div>
+                <div class="icon-bar-zIndex">
+                    <button class="custom-button alignment-button">
+                        <span class="icon-box icon-hide">
+                            <span class="box-fill"></span>
+                            <span class="box-empty"></span>
+                            <span class="box-empty"></span>
+                        </span>
+                    </button>
+                    <button class="custom-button alignment-button">
+                        <span class="icon-box icon-show">
+                            <span class="box-fill"></span>
+                            <span class="box-empty"></span>
+                            <span class="box-empty"></span>
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="position">
+           <div class="position-container">
+                <div class="position-container_section">
+                    <label for="w" class="label">
+                        W
+                    </label>
+                    <input id="w" class="input" title="w" placeholder="500">
+                    <span class="arrows">
+                        &#8652;
+                    </span>
+                    <label for="x" class="label">
+                        X
+                    </label>
+                    <input id="x" class="input" title="x" placeholder="0">
+                    <label for="rotation" class="label label-wide">
+                        Rotation
+                        <span class="degree-sign">0</span>
+                    </label>
+                    <input class="input input-narrow" type="text" id="rotation" placeholder="0" value="">
+                </div>
+               <div class="position-container_section">
+                   <label for="h" class="label">
+                       H
+                   </label>
+                   <input id="h" class="input" title="w" placeholder="100">
+                   <span class="arrows">
+                    </span>
+                   <label for="y" class="label">
+                       Y
+                   </label>
+                   <input id="y" class="input" title="x" placeholder="0">
+               </div>
+               <div class="position-container_section margin-left">
+                    <div class="position-picker">
+                        <span onclick="handleActiveSquare();" id="square1" class="square square-active"></span>
+                        <span onclick="handleActiveSquare();" id="square2" class="square"></span>
+                        <span onclick="handleActiveSquare();" id="square3" class="square"></span>
+                        <span onclick="handleActiveSquare();" id="square4" class="square"></span>
+                        <span onclick="handleActiveSquare();" id="square5" class="square"></span>
+                        <span onclick="handleActiveSquare();" id="square6" class="square"></span>
+                        <span onclick="handleActiveSquare();" id="square7" class="square"></span>
+                        <span onclick="handleActiveSquare();" id="square8" class="square"></span>
+                        <span onclick="handleActiveSquare();" id="square9" class="square"></span>
+                    </div>
+                   <div class="checkbox-container">
+                       <input id="checkbox" type="checkbox" title="sticky">
+                       <label for="checkbox" >Sticky</label>
+                   </div>
+               </div>
+           </div>
+        </section>
+
+        <section class="overflow">
+            <div class="overflow-container">
+                <div class="overflow-container_section" id="radius-btn-section">
+                    <label class="label" for="radius">
+                        Radius
+                    </label>
+                    <div class="overflow-container-close show" id="radius-btn-close">
+                        <input class="input" id="radius" title="radius" placeholder="2"/>
+                        <button onclick="showContainer()" class="icon-button" name="radius-btn">
+                        <span class="icon-button-container">
+                            <span class="btn-square"></span>
+                            <span class="btn-square"></span>
+                            <span class="btn-square"></span>
+                            <span class="btn-square"></span>
+                        </span>
+                        </button>
+                    </div>
+                    <div class="overflow-container-open hide" id="radius-btn-open">
+                        <label class="label-bottom" for="tl">TL</label>
+                        <input id="tl" class="input input-open" placeholder="2">
+
+                        <label class="label-bottom" for="tr">TR</label>
+                        <input id="tr" class="input input-open" placeholder="2">
+
+                        <label class="label-bottom" for="br">BR</label>
+                        <input id="br" class="input input-open" placeholder="2">
+
+                        <label class="label-bottom" for="bl">BL</label>
+                        <input id="bl" class="input input-open" placeholder="2">
+
+                        <button onclick="hideContainer()" class="icon-button" name="radius-btn">
+                            <span class="icon-button-container-border">
+                            </span>
+                        </button>
+                    </div>
+                </div>
+                <div class="overflow-container_section" id="padding-btn-section">
+                    <label class="label" for="padding">
+                        Padding
+                    </label>
+                    <div class="overflow-container-close show" id="padding-btn-close">
+                        <input class="input" id="padding" title="radius" placeholder="2"/>
+                        <button onclick="showContainer()" class="icon-button" name="padding-btn">
+                            <span class="icon-button-container-border">
+                                <span class="btn-square-no_border"></span>
+                                <span class="btn-square-no_border"></span>
+                                <span class="btn-square-no_border"></span>
+                                <span class="btn-square-no_border"></span>
+                            </span>
+                        </button>
+                    </div>
+                    <div class="overflow-container-open hide" id="padding-btn-open">
+                        <label class="label-bottom" for="left">Left</label>
+                        <input id="left" class="input input-open" placeholder="2">
+
+                        <label class="label-bottom" for="top">Top</label>
+                        <input id="top" class="input input-open" placeholder="2">
+
+                        <label class="label-bottom" for="right">Right</label>
+                        <input id="right" class="input input-open" placeholder="2">
+
+                        <label class="label-bottom" for="bottom">Bottom</label>
+                        <input id="bottom" class="input input-open" placeholder="2">
+
+                        <button onclick="hideContainer()" class="icon-button" name="padding-btn">
+                            <span class="icon-button-container-border">
+                            </span>
+                        </button>
+                    </div>
+                    <!---->
+                </div>
+                <div class="overflow-container_section">
+                    <p class="label">
+                        Layer
+                    </p>
+                    <label class="label-bottom" for="blending">Blending</label>
+                    <select name="layer" class="input input-select" id="blending">
+
+                        <option value="normal">Normal</option>
+                        <option value="color">Color</option>
+                        <option value="color-burn">Color-Burn</option>
+                        <option value="color-dodge">Color-Dodge</option>
+                        <option value="darken">Darken</option>
+                        <option value="difference">Difference</option>
+                        <option value="exclusion">Exclusion</option>
+                        <option value="hard-light">Hard-Light</option>
+                        <option value="hue">Hue</option>
+                        <option value="lighten">Lighten</option>
+                        <option value="luminosity">Luminosity</option>
+                        <option value="multiply">Multiply</option>
+                        <option value="overlay">Overlay</option>
+                        <option value="saturation">Saturation</option>
+                        <option value="screen">Screen</option>
+                        <option value="soft-light">Soft-Light</option>
+                    </select>
+                    <label class="label-bottom" for="opacity">Opacity</label>
+                    <input class="input input-percent" id="opacity" title="radius" placeholder="100%"/>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="fill">
+            <div class="fill-container">
+                <div class="section-container-header">
+                    <p class="section-title">fill</p>
+                    <button onclick="toggleSection();" class="plus" name="fill">+</button>
+                </div>
+                <div class="fill-container-body hide" id="fill-body">
+                    <input checked class="checkbox checkbox-color" type="checkbox" title="fill-color">
+                    <input class="colorpicker" type="color" title="fill-color">
+                    <input class="input input-code" type="text" title="fill-color" placeholder="#23F071">
+                    <input class="input" title="fill-color" placeholder="100%">
+
+                    <input checked class="checkbox checkbox-grad" type="checkbox" title="fill-color">
+                    <input class="colorpicker" type="color" title="fill-color">
+                    <label class="label-grad" >Gradient</label>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="stroke">
+            <div class="stroke-container">
+                <div class="section-container-header">
+                    <p class="section-title">stroke</p>
+                    <button onclick="toggleSection();" class="plus" name="stroke">+</button>
+                </div>
+                <div class="stroke-container-body hide" id="stroke-body">
+                    <input checked class="checkbox checkbox-stroke" type="checkbox" title="fill-color">
+                    <input class="colorpicker" type="color" title="stroke-color">
+                    <input class="input input-code" type="text" title="stroke-color" placeholder="#23F071">
+                    <select class="input input-select line-select" title="line-select">
+                        <option value="solid" class="line">______</option>
+                        <option value="dashed" class="space-line">_ _ _ _</option>
+                        <option value="dotted" class="dotted-line">. . . . .</option>
+                    </select>
+                    <input class="input stroke-input" type="text" title="stroke-input" placeholder="1">
+                </div>
+            </div>
+        </section>
+
+        <section class="shadow">
+            <div class="shadow-container">
+                <div class="section-container-header">
+                    <p class="section-title">shadow</p>
+                    <button onclick="toggleSection();" class="plus" name="shadow">+</button>
+                </div>
+                <div class="shadow-container-body hide" id="shadow-body">
+                    <input checked class="checkbox checkbox-stroke" type="checkbox" title="fill-color">
+                    <input class="colorpicker" type="color" title="stroke-color">
+                    <input class="input input-percent" type="text" id="opacity-shadow" placeholder="40%">
+                    <label for="opacity-shadow" class="label-shadow">Opacity</label>
+                    <input class="input"  id="x-shadow" placeholder="0">
+                    <label for="x-shadow" class="label-shadow">x</label>
+                    <input class="input" id="y-shadow" placeholder="10">
+                    <label for="y-shadow" class="label-shadow">y</label>
+                    <input class="input" id="blur" placeholder="30">
+                    <label for="blur" class="label-shadow">Blur</label>
+                    <input class="input" id="spread" placeholder="0">
+                    <label for="spread" class="label-shadow">Spread</label>
+                </div>
+            </div>
+        </section>
+
+        <section class="inner-shadow">
+            <div class="inner-shadow-container">
+                <div class="section-container-header">
+                    <p class="section-title">inner shadow</p>
+                    <button onclick="toggleSection();" class="plus" name="inner-shadow">+</button>
+                </div>
+                <div class="shadow-container-body hide" id="inner-shadow-body">
+                    <input checked class="checkbox checkbox-stroke" type="checkbox" title="fill-color">
+                    <input class="colorpicker" type="color" title="stroke-color">
+                    <input class="input input-percent" type="text" id="opacity-inner-shadow" placeholder="40%">
+                    <label for="opacity-inner-shadow" class="label-shadow">Opacity</label>
+                    <input class="input"  id="x-inner-shadow" placeholder="0">
+                    <label for="x-inner-shadow" class="label-shadow">x</label>
+                    <input class="input" id="y-inner-shadow" placeholder="10">
+                    <label for="y-inner-shadow" class="label-shadow">y</label>
+                    <input class="input" id="inner-shadow-blur" placeholder="30">
+                    <label for="inner-shadow-blur" class="label-shadow">Blur</label>
+                    <input class="input" id="inner-shadow-spread" placeholder="0">
+                    <label for="inner-shadow-spread" class="label-shadow">Spread</label>
+                </div>
+            </div>
+        </section>
+
+
+    </aside>
+
+
+
+    <script src="js/main.js"></script>
+</body>
+</html>
