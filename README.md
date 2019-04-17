@@ -4,7 +4,7 @@
 
 ## Live demo
 
-Project is hosted on Github Pages. https://github.com/agalem/ui-assignment
+Project is hosted on Github Pages. https://agalem.github.io/ui-assignment
 
 ## Viewing locally
 
